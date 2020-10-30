@@ -22,7 +22,9 @@ class DomElement {
         } else if (this.selector.substring(0, 1).trim() === '#') {
             newDiv.id = this.selector.substr(1);
             newDiv.style.background = 'lime';
-        } this.createNewElement();
+        } else {
+            this.createNewElement();
+        }
 
         newDiv.textContent = this.selector.substr(1).trim();
         newDiv.style.height = parseInt(this.height.trim()) + 'px';
